@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<style>
+    .custom-background {
+        background-image: url("{% static 'images/sports2.jpeg' %}"); /* Update with your image path */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: calc(100vh - 56px); /* Adjust height to account for navbar height */
+        color: violet; /* Change text color to violet */
+        margin-top: 40px; /* Adjust this value to raise the text higher */
+        display: flex; /* Centering content */
+        flex-direction: column; /* Column layout */
+        align-items: center; /* Center horizontally */
+        padding: 10px 0; /* Reduced padding for higher placement */
+        text-align: center; /* Center text alignment */
+    }
+    .custom-background h1, .custom-background h2 {
+        margin: 0; /* Remove default margin */
+    }
+</style>
+
+<div class="container custom-background">
+    <h1>Welcome to Sportz</h1>
+    <h2>A SPORTS MANAGEMENT SYSTEM</h2>
+</div>
+{% endblock %}

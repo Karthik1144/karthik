@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block title %}Upcoming Events{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <header class="text-center mb-4">
+        <h1 class="display-4">Sports Event Management</h1>
+        <h2 class="text-primary">Upcoming Events</h2>
+    </header>
+
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">Football Championship</h3>
+                    <p class="card-text"><strong>Date:</strong> September 30, 2024</p>
+                    <p class="card-text"><strong>Location:</strong> City Stadium</p>
+                    <a href="{% url 'event_detail' 'football-championship' %}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">Basketball League</h3>
+                    <p class="card-text"><strong>Date:</strong> October 10, 2024</p>
+                    <p class="card-text"><strong>Location:</strong> Downtown Arena</p>
+                    <a href="{% url 'event_detail' 'basketball-league' %}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">Tennis Open</h3>
+                    <p class="card-text"><strong>Date:</strong> October 15, 2024</p>
+                    <p class="card-text"><strong>Location:</strong> National Tennis Court</p>
+                    <a href="{% url 'event_detail' 'tennis-open' %}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">Kho-Kho Championship</h3>
+                    <p class="card-text"><strong>Date:</strong> November 5, 2024</p>
+                    <p class="card-text"><strong>Location:</strong> Local Sports Complex</p>
+                    <a href="{% url 'event_detail' 'kho-kho-championship' %}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">Volleyball Tournament</h3>
+                    <p class="card-text"><strong>Date:</strong> November 20, 2024</p>
+                    <p class="card-text"><strong>Location:</strong> Community Gymnasium</p>
+                    <a href="{% url 'event_detail' 'volleyball-tournament' %}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">Badminton League</h3>
+                    <p class="card-text"><strong>Date:</strong> December 1, 2024</p>
+                    <p class="card-text"><strong>Location:</strong> Sports Academy</p>
+                    <a href="{% url 'event_detail' 'badminton-league' %}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Custom styles */
+    .card {
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    header h1 {
+        color: violet;
+    }
+
+    .text-primary {
+        color: #007bff; /* Bootstrap primary color */
+    }
+
+    /* Ensure text is visible in dark mode */
+    body.dark-mode header h1 {
+        color: violet; /* Title color */
+    }
+    body.dark-mode .text-primary {
+        color: #bb86fc; /* Slightly lighter color for dark mode */
+    }
+</style>
+{% endblock %}
